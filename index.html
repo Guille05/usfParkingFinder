@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USF Parking Finder</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type = "module" src="./index.js"></script>    
+  </head>
+  <body>
+    <header>
+        <div class="content-wrap">
+          <h1>USF Parking Finder</h1>
+          <h2>A simple solution for parking close to your classes</h2>
+        </div>
+      </header>
+    <h3>Where is your next class located?
+        <div class="building-selector">
+            <label for="building">Select a building:</label>
+            <select id="building" name="building">
+              <option value="ALN">ALN - Allen Building</option>
+              <option value="BSN">BSN - Business Administration</option>
+              <option value="CHE">CHE - Chemistry Building</option>
+              <option value="CIS">CIS - Computer Science & Engineering</option>
+              <option value="CMC">CMC - Marshall Student Center Ballroom</option>
+              <option value="CPR">CPR - Campus Recreation</option>
+              <option value="CWY">CWY - The Centre Gallery at USF</option>
+              <option value="EDU">EDU - Education</option>
+              <option value="ENA">ENA - Engineering Teaching Auditorium</option>
+              <option value="ENG">ENA - Engineering I</option>
+              <option value="ENB">ENB - Engineering II</option>
+              <option value="ENC">ENC - Engineering III</option>
+              <option value="FAD">FAD - Fine Arts - Dance</option>
+              <option value="FAH">FAH - Fine Arts</option>              
+              <option value="FAO">FAO - Faculty Office</option>
+              <option value="FAS">FAS - Fine Arts Studio</option>
+              <option value="HMS">HMS - Marshall Student Center</option>
+              <option value="HON">HON - Honors College</option>
+              <option value="ISA">ISA - Interdisciplinary Sciences</option>
+              <option value="LIB">LIB - Library</option>
+              <option value="MDN">MDN - USF Health-Nursing</option>
+              <option value="MDF">MDN - USF Health-Faculty Office</option>
+              <option value="MDT">MDT - USF Health-Therapy</option>
+              <option value="MDL">MDL - USF Health-Student Group Learning</option>
+              <option value="TAR">TAR - Theater Center</option>
+              <option value="BSF">BSF - Bio-Science</option>
+              <option value="MDT">MDT - USF Health-Therapy</option>
+              <option value="NES">NES - Natural and Environmental Sciences</option>
+              <option value="MDC">MDC - USF Health-Morsani College of Medicine</option>
+              <option value="MHC">MHC - College of Behavioral and Community Science</option>
+              <option value="MUS">MUS - Music Building</option>
+              <option value="PCD">PCD - Psychology & Communication Disorders</option>
+              <option value="PED">PED - Pharmacy/Engineering</option>
+              <option value="SOC">SOC - Sociology Building</option>
+              <option value="ULH">ULH - University Lecture Hall</option>
+              <option value="UTA">UTA - University Teaching Center</option>
+              <option value="UTB">UTB - University Teaching Center Annex</option>
+            </select>       
+            <label for="ptype">Select a building:</label>
+            <select id="ptype" name="ptype">
+              <option value="S">S - Non-Resident Student</option>
+              <option value="R">R - Resident Student</option>
+              <option value="Y">Y - Park-n-Ride / Alumni</option>
+              <option value="GZ">GZ - Gold Zone Staff</option>
+              <option value="E">E - Staff</option>
+              <option value="D">D - Daily / Visitor Parking</option>
+            </select>      
+        </div>
+        <button id="submitButton">Submit</button>
+        <div class="type-selector">
+          
+        </div>
+        <div id="map">
+        </div>
+        <!-- prettier-ignore -->
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+            ({key: "AIzaSyDT5SyBT_Rrb3vEa_kkBWoiIBMtymWegMw", v: "beta"});</script>
+    </h3>
+    <h3 id="message-container"></h3>
+    </body>
+</html>
